@@ -1,0 +1,44 @@
+:root {
+  --color-primary-bg: #121212;
+  --color-button-secondary: #1d1d1d;
+  --color-block-gradient: linear-gradient(180deg, #060707 0%, #1d1d1d 100%);
+  --color-secondary-title: #bea69e;
+  --color-primary-text: #fff;
+  --color-secondary-text: rgba(255, 255, 255, 0.5);
+  --our-courses-item-number: rgba(255, 255, 255, 0.4);
+  --our-courses-border-color: rgba(255, 255, 255, 0.2);
+  --our-courses-right-arrow-color: #777777;
+  --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  --animation-duration: 450ms;
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fafafa;
+  color: #808080;
+  line-height: 1.5;
+  letter-spacing: 0.64px;
+  font-size: 14px;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+input {
+  border: 0;
+  outline: 0;
+}
+
+a,
+a:hover,
+a:visited {
+  color: #2e2f42;
+}
