@@ -3,7 +3,16 @@ let searchTerm = null;
 
 //import fetch
 import { perPage, testGallery } from './js/fetch.js';
-//import fetch
+//smooth scroll
+import { smoothScrollToNextGroup } from './js/components/scroll.js';
+//card height
+import { getCardHeight } from './js/components/img-block-height.js';
+//markup
+import { createMarkup } from './js/template.js';
+//function
+import { showError } from './js/components/modal.js';
+//popup with image
+import { lightbox } from './js/components/lightbox.js';
 
 //Form
 const form = document.querySelector('#imageSearchForm');
@@ -33,8 +42,8 @@ form.addEventListener('submit', async function (e) {
       markup += createMarkup(element);
     });
     gallery.innerHTML = markup;
-    lightbox();
     showLoadMoreButton(data.totalHits);
+    lightbox.refresh();
   }
   loader.style.display = 'none';
   searchInput.value = '';
@@ -56,13 +65,12 @@ loadMoreBtn.addEventListener('click', async function (e) {
     });
 
     gallery.insertAdjacentHTML('beforeend', markup);
-    lightbox();
     showLoadMoreButton(data.totalHits);
+    lightbox.refresh();
   }
   loader.style.display = 'none';
   smoothScrollToNextGroup(getCardHeight());
 });
-//loadMore image
 
 //LoadMoreButton
 function showLoadMoreButton(totalHits) {
@@ -73,21 +81,3 @@ function showLoadMoreButton(totalHits) {
     showError("We're sorry, but you've reached the end of search results.");
   }
 }
-//LoadMoreButton
-//smooth scroll
-import { smoothScrollToNextGroup } from './js/components/scroll.js';
-//smooth scroll
-//card height
-import { getCardHeight } from './js/components/img-block-height.js';
-//card height
-//markup
-import { createMarkup } from './js/template.js';
-//markup
-
-//function
-import { showError } from './js/components/modal.js';
-//function
-
-//popup with image
-import { lightbox } from './js/components/lightbox.js';
-//popup with image

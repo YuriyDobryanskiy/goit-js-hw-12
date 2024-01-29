@@ -10,5 +10,6 @@ export function showError(message) {
     backgroundColor: '#EF4040',
     iconUrl: imgUrl,
     messageColor: '#FAFAFB',
+    position: 'topRight',
   });
 }

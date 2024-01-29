@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { showError } from './components/modal.js';
 
-const perPage = 10;
+const perPage = 40;
 const API_KEY = '41936160-9a65f6e7e8f481bcadff71523';
 const BASE_URL = 'https://pixabay.com/api';
 
